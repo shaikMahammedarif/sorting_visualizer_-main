@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" media="screen" href="style.css">
+  <script src="index.js" type="module" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <select name="" id="selectAlgorithm" class="select-algorithm">
+        <option value="bubbleSort" selected>Bubble Sort</option>
+        <option value="selectionSort">Selection Sort</option>
+        <option value="quickSort">Quick Sort</option>
+        <!-- <option value="mergeSort">Merge Sort</option> -->
+      </select>
+      <div class="generate-new">
+        <p>Generate New Array</p>
+        <p class="generate-neww"><span style="color: red;">Note</span>: Maximum Array Size Should be Below 40.</p>
+        <input type="number" name="sizeArray" id="numbersBars" max="20" min="1" value="30">
+        <button id="generateBtn">New</button>
+      </div>
+      <div class="buttons">
+        <button id="solveBtn">Solve</button>
+      </div>
+    </div>
+    <div class="stage" id="stage"></div>
+  </div>
+  <div class="message-container">
+    <p class="generate-new">Open in a <span style="color: red;">larger device</span> to use the sorting visualizer.</p>
+    <img src="https://t4.ftcdn.net/jpg/07/56/99/33/360_F_756993388_Md2eIDo9zgxyn3hnQGSekL7gn7vpLal4.jpg" alt="Larger Device Required" class="device-image">
+  </div>
+</body>
+
+</html>

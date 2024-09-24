@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image:url('https://4kwallpapers.com/images/walls/thumbs_2t/17330.png');
+  background-size: cover;
+}
+
+.container {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 10px;
+  align-items: center;
+  width: 200px;
+  height: 95vh;
+  background: rgba(3, 25, 79, 0.136);
+  box-shadow: 0 8px 32px 10px rgba(46, 51, 148, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  width: 20%;
+}
+
+.stage {
+  display: flex;
+  position: relative;
+  height: 96vh;
+  background: #fdfdfd;
+  padding: 10px;
+  border-radius: 5px;
+  align-items: flex-end;
+  background: rgba(3, 25, 79, 0.136);
+  box-shadow: 0 8px 32px 40px rgba(31, 38, 135,0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  width: 70%;
+}
+
+.bar {
+  position: absolute;
+  height: 500px;
+  background: #fff;
+  transition: all 300ms ease-out;
+  border-radius: 6px;
+}
+
+.bar.activate {
+  background: #2bff00;
+  transition-property: 0.3s;
+  animation: upAndDownScale 1.5s ease-in-out;
+}
+
+@keyframes upAndDownScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.generate-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border: 2px solid #130f0f;
+  padding: 5px;
+  height: 40vh;
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 40px ;
+}
+.generate-neww{
+  font-size: 20px;
+}
+
+.generate-new input {
+  padding: 2px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 16px;
+}
+
+button {
+  background: #0e2573;
+  border-radius: 8px;
+  border-style: none;
+  color: #FFF;
+  font-size: medium;
+  cursor: pointer;
+  padding: 5px 16px;
+  margin: 10px;
+  height: 50px;
+  width: 100px;
+}
+
+button:hover {
+  background: #d99f00;
+}
+
+.select-algorithm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4b700;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 30px;
+  width: 130px;
+  color: #FFF;
+  font-size: 15px;
+  margin-bottom: 100px;
+
+}
+
+.select-algorithm select {
+  background: #0563af;
+  color: #0c0303;
+  padding: 2px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+}
+
+.select-algorithm select option {
+  padding: 40px;
+  margin: 20px;
+
+}
+/* Existing styles... */
+
+/* Message container styles */
+.message-container {
+  display: none; /* Hidden by default */
+  text-align: center;
+  margin: 20px;
+  color: white; /* Adjust color based on your design */
+}
+
+.device-image {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Show message for medium and small devices */
+@media (max-width: 991px) {
+  .container {
+    display: none; /* Hide the main content on medium and small devices */
+  }
+
+  .message-container {
+    display: block; /* Show the message on medium and small devices */
+  }
+}
+
