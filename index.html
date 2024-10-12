@@ -1,39 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sorting Visualizer</title>
-  <link rel="stylesheet" media="screen" href="style.css">
-  <script src="index.js" type="module" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="index.js" type="module" defer></script>
+    <style>
+        /* Add 3D effect styles */
+        .wow {
+            perspective: 1000px;
+        }
+        .wow .animated {
+            transform: translateZ(0) scale(1);
+            transition: transform 1.5s ease-out;
+        }
+        /* .wow.animated:hover {
+            transform: translateZ(50px) scale(1.05);
+        } */
+        .wow.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+.wow.slideInRight {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+    </style>
 </head>
-
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <select name="" id="selectAlgorithm" class="select-algorithm">
-        <option value="bubbleSort" selected>Bubble Sort</option>
-        <option value="selectionSort">Selection Sort</option>
-        <option value="quickSort">Quick Sort</option>
-        <!-- <option value="mergeSort">Merge Sort</option> -->
-      </select>
-      <div class="generate-new">
-        <p>Generate New Array</p>
-        <p class="generate-neww"><span style="color: red;">Note</span>: Maximum Array Size Should be Below 40.</p>
-        <input type="number" name="sizeArray" id="numbersBars" max="20" min="1" value="30">
-        <button id="generateBtn">New</button>
-      </div>
-      <div class="buttons">
-        <button id="solveBtn">Solve</button>
-      </div>
-    </div>
-    <div class="stage" id="stage"></div>
-  </div>
-  <div class="message-container">
-    <p class="generate-new">Open in a <span style="color: red;">larger device</span> to use the sorting visualizer.</p>
-    <img src="https://t4.ftcdn.net/jpg/07/56/99/33/360_F_756993388_Md2eIDo9zgxyn3hnQGSekL7gn7vpLal4.jpg" alt="Larger Device Required" class="device-image">
-  </div>
-</body>
+    <header>
+        <header>
+            <h1 class="wow slideInLeft">Sorting Visualizer</h1>
+            <p class="names wow slideInRight">Developed by <span class="namess">Arif.dev</span></p>
+        </header>
+        
+    </header>
 
+    <div class="container">
+        <div class="sidebar">
+            <select name="" id="selectAlgorithm" class="select-algorithm">
+                <option value="bubbleSort" selected>Bubble Sort</option>
+                <option value="selectionSort">Selection Sort</option>
+                <option value="quickSort">Quick Sort</option>
+            </select>
+            <div class="generate-new">
+                <p>Generate New Array</p>
+                <p class="generate-neww"><span style="color: red;">Note</span>: Maximum Array Size Should be Below 40.</p>
+                <input type="number" name="sizeArray" id="numbersBars" max="20" min="1" value="30">
+                <button id="generateBtn">New</button>
+            </div>
+            <div class="buttons">
+                <button id="solveBtn">Solve</button>
+            </div>
+        </div>
+        <div class="stage" id="stage"></div>
+    </div>
+    <div class="message-container">
+        <p class="generate-new">Open in a <span style="color: red;">larger device</span> to use the sorting visualizer.</p>
+        <img src="https://t4.ftcdn.net/jpg/07/56/99/33/360_F_756993388_Md2eIDo9zgxyn3hnQGSekL7gn7vpLal4.jpg" alt="Larger Device Required" class="device-image">
+    </div>
+
+    <section id="bubble-sort" class="algorithm-section wow animate__animated animate__fadeIn">
+        <h2>Bubble Sort</h2>
+        <p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.</p>
+        <div class="algorithm-details">
+            <div>
+                <h3>Use Cases</h3>
+                <ul>
+                    <li>Educational purposes</li>
+                    <li>Small datasets</li>
+                    <li>Nearly sorted arrays</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Pros and Cons</h3>
+                <ul>
+                    <li><span class="pro">Pro:</span> Easy to understand and implement</li>
+                    <li><span class="con">Con:</span> Inefficient for large datasets</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Time Complexity</h3>
+                <ul>
+                    <li>Best Case: O(n)</li>
+                    <li>Average Case: O(n²)</li>
+                    <li>Worst Case: O(n²)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="youtubev">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/xli_FI7CuzA?si=HI-exAY9v4dvk-4n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="selection-sort" class="algorithm-section wow animate__animated animate__fadeIn">
+        <h2>Selection Sort</h2>
+        <p>Selection Sort divides the input list into two parts: a sorted portion and an unsorted portion. It repeatedly selects the smallest element from the unsorted portion and adds it to the sorted portion.</p>
+        <div class="algorithm-details">
+            <div>
+                <h3>Use Cases</h3>
+                <ul>
+                    <li>Small datasets</li>
+                    <li>When memory usage is a concern</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Pros and Cons</h3>
+                <ul>
+                    <li><span class="pro">Pro:</span> Simple and performs well on small lists</li>
+                    <li><span class="con">Con:</span> Inefficient for large datasets</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Time Complexity</h3>
+                <ul>
+                    <li>Best Case: O(n²)</li>
+                    <li>Average Case: O(n²)</li>
+                    <li>Worst Case: O(n²)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="youtubev">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/g-PGLbMth_g?si=-rDj8MmtVrOK0XyL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="insertion-sort" class="algorithm-section wow animate__animated animate__fadeIn">
+        <h2>Insertion Sort</h2>
+        <p>Insertion Sort builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.</p>
+        <div class="algorithm-details">
+            <div>
+                <h3>Use Cases</h3>
+                <ul>
+                    <li>Small datasets</li>
+                    <li>Nearly sorted arrays</li>
+                    <li>Online algorithms (where new data arrives in real-time)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Pros and Cons</h3>
+                <ul>
+                    <li><span class="pro">Pro:</span> Simple implementation and efficient for small datasets</li>
+                    <li><span class="con">Con:</span> Inefficient for large datasets</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Time Complexity</h3>
+                <ul>
+                    <li>Best Case: O(n)</li>
+                    <li>Average Case: O(n²)</li>
+                    <li>Worst Case: O(n²)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="youtubev">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/Hoixgm4-P4M?si=zYdzMrYofhkccruq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footers">&copy; 2024 Arif.dev. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize WOW.js
+        new WOW().init();
+    </script>
+</body>
 </html>

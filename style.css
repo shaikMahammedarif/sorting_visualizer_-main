@@ -181,3 +181,108 @@ button:hover {
   }
 }
 
+:root {
+  --primary-color: #0b0c02;
+  --secondary-color: #ff0000;
+  --accent-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --text-color: #ffffff;
+}
+
+
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20rem;
+}
+.names{
+  font-size: 20rem;
+}
+.namess{
+  color: #d99f00;
+}
+
+
+.algorithm-section {
+  background-color: rgba(255, 255, 255, 0.048);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.algorithm-section h2 {
+  color: white;
+  font-size: 7.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.algorithm-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+p{
+  color: #ecf0f1;
+  font-size: 2.5rem;
+}
+li{
+  color: #ecf0f1;
+}
+.youtubev
+{display: flex;
+  justify-content: center;
+  align-items: center;
+}
+iframe{
+  padding: 30px;
+  border-radius: 3%;
+}
+.algorithm-details > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.algorithm-details h3 {
+  color: var(--secondary-color);
+}
+
+.pro {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.con {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.highlight {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.footers{
+  font-size: small;
+}
+
+@media (max-width: 991px) {
+  .container {
+    display: none; /* Hide the main content on medium and small devices */
+  }
+
+  .message-container {
+    display: block; /* Show the message on medium and small devices */
+  }
+}
+
+/* animation */
