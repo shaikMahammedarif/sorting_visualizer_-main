@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorting Visualizer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/Y9LLXVM2/ca21ae6bb8b60d8d7528f97b4bb8792f.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="index.js" type="module" defer></script>
     <style>
         /* Add 3D effect styles */
-        .wow {
+        /* .wow {
             perspective: 1000px;
         }
         .wow .animated {
@@ -19,7 +20,7 @@
         }
         /* .wow.animated:hover {
             transform: translateZ(50px) scale(1.05);
-        } */
+        } 
         .wow.slideInLeft {
   animation-name: slideInLeft;
 }
@@ -48,21 +49,33 @@
       transform: translateX(0);
       opacity: 1;
   }
+} */
+.slideInLeft {
+  animation: slideInLeft 1s forwards;
+}
+
+.slideInRight {
+  animation: slideInRight 1s forwards;
 }
 
     </style>
 </head>
 <body>
-    <header>
-        <header>
-            <h1 class="wow slideInLeft">Sorting Visualizer</h1>
-            <p class="names wow slideInRight">Developed by <span class="namess">Arif.dev</span></p>
-        </header>
-        
-    </header>
+    
+            <header>
+               
+                <h1 class=" wow slideInRight" data-wow-delay="0.1s">Sorting</h1>
+                <h1 class="hello_color wow slideInLeft" data-wow-delay="1s">Visualizer </h1>
+                <p class="names wow animate__animated animate__fadeIn" data-wow-delay="0.4s">Developed </p>
+                <p class=" wow animate__animated animate__fadeIn" data-wow-delay="0.4s">by <span class="namess">Arif.dev</span></p>
+            </header>
+       
 
+            <p class=" wow slideInLeft" data-wow-delay="0.4s">Try <span class="namesss">it out!!!</span></p>
     <div class="container">
+
         <div class="sidebar">
+           
             <select name="" id="selectAlgorithm" class="select-algorithm">
                 <option value="bubbleSort" selected>Bubble Sort</option>
                 <option value="selectionSort">Selection Sort</option>
@@ -184,7 +197,7 @@
     </section>
 
     <footer>
-        <p class="footers">&copy; 2024 Arif.dev. All rights reserved.</p>
+        <p class="footers">&copy; 2024 <a href="https://github.com/shaikMahammedarif">Arif.dev</a>. All rights reserved.</p>
     </footer>
 
     <script>

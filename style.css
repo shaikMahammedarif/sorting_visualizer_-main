@@ -6,8 +6,9 @@
 }
 
 body {
-  background-image:url('https://4kwallpapers.com/images/walls/thumbs_2t/17330.png');
-  background-size: cover;
+  background-image:url('https://images.pexels.com/photos/28583189/pexels-photo-28583189/free-photo-of-abstract-colorful-fluid-art-with-swirling-patterns.jpeg');
+  background-size: auto;
+  background-repeat: repeat;
 }
 
 .container {
@@ -182,7 +183,7 @@ button:hover {
 }
 
 :root {
-  --primary-color: #0b0c02;
+  --primary-color: #0b0c0233;
   --secondary-color: #ff0000;
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
@@ -190,7 +191,9 @@ button:hover {
 }
 
 
-
+.hello_color{
+  color: rgb(20, 185, 11);
+}
 header {
   background-color: var(--primary-color);
   color: white;
@@ -207,11 +210,17 @@ header h1 {
 }
 .namess{
   color: #d99f00;
+  font-size: 20rem;
+}
+.namesss{
+  color: #d20d0d;
+  font-size: 10rem;
+  text-align: center;
 }
 
 
 .algorithm-section {
-  background-color: rgba(255, 255, 255, 0.048);
+  background-color: rgba(0, 0, 0, 0.434);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
@@ -219,10 +228,10 @@ header h1 {
 }
 
 .algorithm-section h2 {
-  color: white;
+  color: rgb(255, 183, 0);
   font-size: 7.5rem;
   border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
 }
 
 .algorithm-details {
@@ -286,3 +295,4 @@ iframe{
 }
 
 /* animation */
+
